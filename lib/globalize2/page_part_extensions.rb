@@ -5,6 +5,7 @@ module Globalize2
         extend Globalize2::LocalizedContent
         
         localized_content_for :content
+
       end
     end
 

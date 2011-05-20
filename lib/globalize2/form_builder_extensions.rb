@@ -14,7 +14,7 @@ module Globalize2
     end
 
     def globalized_method_name(object_name,method)
-      object_class = object_name.to_s.capitalize.constantize rescue nil
+      object_class = object_name.to_s.camelize.constantize rescue nil
       if (object_class.respond_to? :translated_attribute_names) && (object_class.translated_attribute_names.include? method)
         method = "#{method}_#{Globalize2Extension.content_locale}".to_sym
       end

@@ -17,6 +17,7 @@ module Globalize2
 
         translates :title, :slug, :breadcrumb, :description, :keywords
         localized_content_for :title, :slug, :breadcrumb
+
         
         attr_accessor :reset_translations
         alias_method_chain 'tag:link', :globalize
